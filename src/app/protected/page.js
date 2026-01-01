@@ -22,7 +22,7 @@ export default function ProtectedPage() {
   useEffect(() => {
     // Get API key from sessionStorage
     const storedApiKey = sessionStorage.getItem("apiKeyToValidate");
-    
+
     if (!storedApiKey) {
       // No API key found, redirect back to API-Playground
       router.push("/API-Playground");
@@ -36,7 +36,7 @@ export default function ProtectedPage() {
   const validateApiKey = async (keyToValidate) => {
     try {
       setIsValidating(true);
-      
+
       // Query Supabase to check if the API key exists and is active
       const { data, error } = await supabase
         .from("api_keys")
@@ -58,7 +58,7 @@ export default function ProtectedPage() {
           message: "Valid API key, /protected can be accessed",
           type: "success",
         });
-        
+
         // Clear the stored API key after successful validation
         sessionStorage.removeItem("apiKeyToValidate");
       } else {
@@ -230,11 +230,13 @@ export default function ProtectedPage() {
                     Access Granted
                   </h2>
                   <p className="text-gray-600 mb-6">
-                    Your API key is valid. You now have access to the protected area.
+                    Your API key is valid. You now have access to the protected
+                    area.
                   </p>
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
                     <p className="text-sm text-green-800">
-                      <strong>Status:</strong> Valid API key, /protected can be accessed
+                      <strong>Status:</strong> Valid API key, /protected can be
+                      accessed
                     </p>
                   </div>
                   <div className="flex gap-4 justify-center">
@@ -277,7 +279,8 @@ export default function ProtectedPage() {
                   </p>
                   <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
                     <p className="text-sm text-red-800">
-                      <strong>Error:</strong> Invalid API key. Please check your key and try again.
+                      <strong>Error:</strong> Invalid API key. Please check your
+                      key and try again.
                     </p>
                   </div>
                   <button
