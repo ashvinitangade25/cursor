@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Sidebar from "@/components/Sidebar";
-import Toast from "@/components/Toast";
-import { supabase } from "@/lib/supabase";
+import Sidebar from "../../components/Sidebar";
+import Toast from "../../components/Toast";
+import { supabase } from "../../lib/supabase";
 
 export default function ProtectedPage() {
   const [sidebarOpen, setSidebarOpen] = useState(true);

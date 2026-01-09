@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { generateApiKey } from "@/utils/apiKeyUtils";
+import { generateApiKey } from "../utils/apiKeyUtils";
 
 /**
  * Modal component for creating and editing API keys

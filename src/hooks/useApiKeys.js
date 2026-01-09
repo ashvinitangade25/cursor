@@ -7,7 +7,7 @@ import {
   useRef,
   startTransition,
 } from "react";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "../lib/supabase";
 
 /**
  * Custom hook for managing API keys CRUD operations

@@ -2,13 +2,13 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import Sidebar from "@/components/Sidebar";
-import Toast from "@/components/Toast";
-import ApiKeysTable from "@/components/ApiKeysTable";
-import ApiKeyModal from "@/components/ApiKeyModal";
-import { useApiKeys } from "@/hooks/useApiKeys";
-import { generateApiKey } from "@/utils/apiKeyUtils";
-import { copyToClipboard } from "@/utils/clipboard";
+import Sidebar from "../../components/Sidebar";
+import Toast from "../../components/Toast";
+import ApiKeysTable from "../../components/ApiKeysTable";
+import ApiKeyModal from "../../components/ApiKeyModal";
+import { useApiKeys } from "../../hooks/useApiKeys";
+import { generateApiKey } from "../../utils/apiKeyUtils";
+import { copyToClipboard } from "../../utils/clipboard";
 
 export default function DashboardsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);

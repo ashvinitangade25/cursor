@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "../../components/Sidebar";
 
 export default function DocumentationPage() {
   const [sidebarOpen, setSidebarOpen] = useState(true);

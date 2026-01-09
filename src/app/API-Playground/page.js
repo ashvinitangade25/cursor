@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "../../components/Sidebar";
 
 export default function ApiPlaygroundPage() {
   const [sidebarOpen, setSidebarOpen] = useState(true);

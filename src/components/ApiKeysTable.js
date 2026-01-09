@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { maskApiKey, formatApiKey } from "@/utils/apiKeyUtils";
+import { maskApiKey, formatApiKey } from "../utils/apiKeyUtils";
 
 /**
  * Component for displaying API keys in a table
